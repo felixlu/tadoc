@@ -19,10 +19,10 @@ set PATH=%PATH%;%BasePath%\bin\;%BasePath%\libs\;
 %BasePath%\bin\xsltproc -o %TmpPath% --xinclude %XslPath% %DocBookFilePath%
 mkdir %TmpPath%\images
 mkdir %TmpPath%\css
-if exist %DocBookPath%\images xcopy %DocBookPath%\images %TmpPath%\images  /Y /E
-if exist %DocBookPath%\css xcopy %DocBookPath%\css %TmpPath%\css  /Y /E
-xcopy %BasePath%\misc\images %TmpPath%\images /Y /E
-xcopy %BasePath%\misc\css\html\* %TmpPath%\css /Y /E
+if exist %DocBookPath%\images xcopy %DocBookPath%\images %TmpPath%\images  /Y
+if exist %DocBookPath%\css xcopy %DocBookPath%\css %TmpPath%\css  /Y
+xcopy %BasePath%\misc\images %TmpPath%\images  /Y
+xcopy %BasePath%\misc\css\html\* %TmpPath%\css   /Y
 regsvr32 /s %BasePath%\bin\itcc.dll
 cd %TmpPath%
 %BasePath%\bin\hhc.exe htmlhelp.hhp
@@ -30,7 +30,7 @@ cd %BasePath%
 
 regsvr32 /s/u %BasePath%\bin\itcc.dll
 mkdir %TargetPath%
-copy %TmpPath%\docbook.chm %TargetFile%
+cp %TmpPath%\docbook.chm %TargetFile%
 ENDLOCAL
 
 REM create pdf
@@ -73,6 +73,6 @@ xcopy %BasePath%\misc\css\html %TmpPath%\css   /Y /E
 java -cp %LOCALCLASSPATH% org.apache.fop.cli.Main -c %BasePath%\misc\fop.xconf  %TmpPath%\docbook.fo  -pdf %TmpPath%\docbook.pdf
 
 
-copy %TmpPath%\docbook.pdf %TargetFile%
+cp %TmpPath%\docbook.pdf %TargetFile%
 ENDLOCAL
-explorer {TargetPath}
+explorer /e,{TargetPath}
