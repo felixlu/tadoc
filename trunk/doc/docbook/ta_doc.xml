@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>TaDoc 文档工具</title>
+
+    <author>
+      <personname><firstname>Tim</firstname><surname>Huang</surname></personname>
+
+      <affiliation>
+        <orgname>ToAction</orgname>
+      </affiliation>
+    </author>
+
+    <pubdate>2012-04-15</pubdate>
+  </info>
+
+  <article>
+    <title>概述</title>
+
+    <para>TaDoc是一个帮助人们将Docbook文档生成pdf,chm文件的工具。本工具简化了配置的过程，并提供自动生成代码的脚本。</para>
+
+    <para>本工具使用了以下程序</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>docbook xsl</para>
+      </listitem>
+
+      <listitem>
+        <para>xsltproc</para>
+      </listitem>
+
+      <listitem>
+        <para>apache fop</para>
+      </listitem>
+
+      <listitem>
+        <para>HTML Help Workshop</para>
+      </listitem>
+
+      <listitem>
+        <para>php</para>
+      </listitem>
+
+      <listitem>
+        <para>md5</para>
+      </listitem>
+
+      <listitem>
+        <para>sha1</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>用户需要自行安装java虚拟机 （http://www.java.com/zh_CN/download/ ）</para>
+  </article>
+
+  <chapter>
+    <title>入门应用</title>
+
+    <section>
+      <title>生成本工具的帮助文档</title>
+
+      <orderedlist>
+        <listitem>
+          <para>进入本工具的根目录</para>
+        </listitem>
+
+        <listitem>
+          <para>双击运行 tadoc.bat 文件</para>
+        </listitem>
+
+        <listitem>
+          <para>运行完毕后，将会在doc/docbook/target 目录中查看到新的生TaDoc.chm 及 TaDoc.pdf
+          文件。</para>
+        </listitem>
+      </orderedlist>
+    </section>
+
+    <section>
+      <title>生成自己的项目文档</title>
+
+      <para/>
+
+      <orderedlist>
+        <listitem>
+          <para>编写Docbook文件（使用<link
+          xlink:href="http://www.xmlmind.com">XmlMind</link>进行创建Docbook文档）</para>
+        </listitem>
+
+        <listitem>
+          <para>进入本工具的根目录</para>
+        </listitem>
+
+        <listitem>
+          <para>双击运行 generate.bat 文件，根据提示填写内容，最后生成适用于你的项目文档的脚本。</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>项目标识：是生成脚本及chm和pdf的文件名</para>
+            </listitem>
+
+            <listitem>
+              <para>DocBook文件的路径， 填写绝对路以保证程序移动到其它位置也能正常运行。
+              如果使用引用方式建立Docbook文档， 只需要填写Docbook文档的文件地址即可。</para>
+            </listitem>
+
+            <listitem>
+              <para>生成的目标目录：生成的文件最后存放的目录</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>打开本工具的根目录，双击运行刚才生成的脚本。即可生成你需要的chm及pdf文档。</para>
+        </listitem>
+      </orderedlist>
+    </section>
+  </chapter>
+</book>
