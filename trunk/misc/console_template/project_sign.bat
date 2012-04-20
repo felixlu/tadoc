@@ -30,7 +30,7 @@ cd %BasePath%
 
 regsvr32 /s/u %BasePath%\bin\itcc.dll
 mkdir %TargetPath%
-copy %TmpPath%\docbook.chm %TargetFile%
+copy %TmpPath%\htmlhelp.chm %TargetFile%
 ENDLOCAL
 
 REM create pdf
@@ -76,4 +76,4 @@ java -cp %LOCALCLASSPATH% org.apache.fop.cli.Main -c %BasePath%\misc\fop.xconf  
 copy %TmpPath%\docbook.pdf %TargetFile%
 ENDLOCAL
 explorer /e,{TargetPath}
-pasue
+pause
