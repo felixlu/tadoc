@@ -25,6 +25,5 @@
     <xsl:import href="../../docbook-xsl/htmlhelp/htmlhelp.xsl" />
     <xsl:import href="chm-style.xsl" />
     <xsl:include href="chm-titlepage.xsl" />
-    <xsl:param name="htmlhelp.chm">docbook.chm</xsl:param>
 </xsl:stylesheet>
 

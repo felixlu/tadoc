@@ -28,7 +28,12 @@
     <xsl:param name="suppress.navigation" select="0"/>
     <xsl:param name="use.id.as.filename" select="1"/>
 
-<!--<xsl:param name="toc.section.depth">5</xsl:param>-->
+    <xsl:param name="chunk.tocs.and.lots">1</xsl:param>
+
+    <xsl:param name="chunker.output.indent">yes</xsl:param>
+    <xsl:param name="chunk.separate.lots">1</xsl:param>
+    <xsl:param name="chunk.first.sections">0</xsl:param>
+    <xsl:param name="toc.section.depth">10</xsl:param>
 <!--    <xsl:param name="htmlhelp.show.advanced.search" select="1"/>-->
     <xsl:param name="htmlhelp.remember.window.position" select="1"/>
     <xsl:param name="generate.index" select="1"/>
